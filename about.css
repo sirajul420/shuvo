@@ -1,0 +1,237 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --text-color:black;
+    --text2-color:white;
+    --text3-color:crimson;
+    --text4-color:brown;
+    --text5-color:seagreen;
+    --text6-color:forestgreen;
+    --text6-color:whitesmoke;
+    --text7-color:blue;
+    --text8-color:darkgoldenrod;
+    --text9-color:tomato;
+    --background-color:black;
+    --background2-color:darkslategray;
+    --background3-color:#c2edda;
+    --background4-color:darkblue;
+    --background5-color:yellowgreen;
+    --background6-color:yellow;
+    --background7-color:darkolivegreen;
+    --background8-color:chartreuse;
+    --background9-color:green;
+    --background10-color:darkgreen;
+    --background11-color:greenyellow;
+    --background12-color:darkcyan;
+    --background13-color:skyblue;
+    --background14-color:darkred;
+}
+/* HEADER START */
+Header{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color:var(--background-color);
+}
+/* FIXED START */
+.fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    background-color:var(--background2-color) ;
+}
+.logo{
+    margin-left: 20px;
+    z-index: 1;
+}
+.logo h1{
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 20px;
+}
+span{
+    color: var(--text2-color);
+    font-weight: bold;
+}
+.menu{
+    margin-top: 13px;
+    margin-left: 20px;
+}
+.menu ul li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 10px 20px;
+}
+.menu ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color:var(--text2-color);
+    font-weight:bold ;
+}
+.menu ul li a:hover{
+    color: aqua;
+    font-weight: bold;
+}
+.what{
+    margin-right: 20px;
+}
+/* FIXED END */
+/* CONTENT START */
+.content{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+}
+.content h2{
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--text2-color);
+}
+.content span{
+    color: var(--text3-color);
+    font-weight: bold;
+}
+.content h3{
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: var(--text2-color);
+    animation: B1 5s linear infinite;
+}
+@keyframes B1{
+    0%{
+        color: var(--text6-color);
+    }
+    25%{
+        color: var(--background11-color);
+    }
+    50%{
+        color:var(--background9-color);
+    }
+    75%{
+        color: var(--text9-color);
+    }
+    100%{
+        color:var(--text6-color);
+    }
+}
+.content p{
+    width: 80%;
+}
+.images{
+    height: 100%;
+    background-color:var(--background2-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    border-top-right-radius:35% ;
+    border-bottom-right-radius: 35%;
+}
+.effect{
+    position: absolute;
+    top: 30%;
+    left: 200px;
+}
+.effect img{
+    height: 350px;
+    width: 300px;
+    transition: 1s;
+    object-fit: cover;
+}
+.effect img:hover{
+    border: 5px solid white;
+    transform: translate(20px ,20px);
+    object-fit: cover;
+}
+.effect h4{
+    font-size: 25px;
+    color:var(--text6-color);
+    margin-left: 50px;
+}
+footer{
+    width: 80%;
+    height: 50vh;
+    text-align: center;
+    margin:0 auto;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+footer p{
+    width: 50%;
+    margin: 0 auto;
+}
+/* CONTENT END */
+/* HEADER END */
+@media screen and (max-width:600px) {
+    Header{
+        height: auto;
+        padding: 10px 0;
+    }
+    .fixed{
+        position: unset;
+        justify-content:unset;
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+    .logo h1{
+        text-align: center;
+    }
+    .menu{
+        margin-top: unset;
+        margin-left:unset;
+    }
+    .menu ul{
+        text-align: center;
+    }
+    .menu ul li{
+        display: block;
+    }
+    .what{
+        margin-right: unset;
+    }
+    .content{
+        position: unset;
+        top: unset;
+        left: unset;
+        padding: 10px 10px;
+    }
+    .images{
+        position: unset;
+        width: 100%;
+        padding: 10px 10px;
+        border-top-right-radius:unset ;
+        border-bottom-right-radius: unset;
+    }
+    .effect{
+        position: unset;
+        top: unset;
+        left: unset;
+    }
+    .effect img{
+        width: 100%;
+    }
+    .effect img:hover{
+        transform: unset;
+        object-fit: cover;
+    }
+    footer{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin:0 auto;
+        padding: 10px 10px;
+        margin-bottom: 10px;
+    }
+    footer p{
+        width: 100%;
+    }
+}
